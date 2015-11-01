@@ -39,6 +39,7 @@ group :development, :test do
   gem 'rb-fsevent', '~> 0.9.1'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'shoulda-matchers', '~> 3.0'
 end
 
 group :development do
