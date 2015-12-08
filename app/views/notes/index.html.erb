@@ -1,0 +1,7 @@
+<a>New note</a>
+
+<ul>
+<% @notes.each do |note| %>
+<li><a><%= note.name %></a></li>
+<% end %>
+</ul>

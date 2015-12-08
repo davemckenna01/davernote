@@ -36,10 +36,12 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
-  gem 'rb-fsevent', '~> 0.9.1'
+  gem 'rb-fsevent'
   gem 'guard'
   gem 'guard-rspec'
   gem 'shoulda-matchers', '~> 3.0'
+  gem 'capybara'
+  gem 'launchy', '2.2.0'
 end
 
 group :development do
