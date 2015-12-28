@@ -6,7 +6,6 @@
     <%= f.text_field :content %>
 
     <div class="field">
-    <%= f.label :tag_id %><br />
     <%= collection_check_boxes(:note, :tag_ids, @tags, :id, :name) %> 
     </div>    
 
