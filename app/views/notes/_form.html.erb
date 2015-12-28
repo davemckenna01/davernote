@@ -7,7 +7,7 @@
 
     <div class="field">
     <%= f.label :tag_id %><br />
-    <%= collection_check_boxes(:note, :tags, @tags, :id, :name) %> 
+    <%= collection_check_boxes(:note, :tag_ids, @tags, :id, :name) %> 
     </div>    
 
     <%= f.submit "Submit" %>

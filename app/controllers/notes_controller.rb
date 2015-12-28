@@ -14,10 +14,6 @@ class NotesController < ApplicationController
 
   def update
     @note.update(note_params)
-    puts params[:note][:tags].class
-    # tags = Tag.find(params[:note][:tags])
-    # puts "TAGS>>>>>>>>", tags
-    # @note.tags << tags
     redirect_to note_url(@note)
   end
 
@@ -41,7 +37,7 @@ class NotesController < ApplicationController
   end
 
   def note_params
-    params.require(:note).permit(:name, :content)
+    params.require(:note).permit(:name, :content, { tag_ids:[] })
   end
 
   private
