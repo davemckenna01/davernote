@@ -5,5 +5,10 @@
     <%= f.label :content %>
     <%= f.text_field :content %>
 
+    <div class="field">
+    <%= f.label :tag_id %><br />
+    <%= collection_check_boxes(:note, :tags, @tags, :id, :name) %> 
+    </div>    
+
     <%= f.submit "Submit" %>
 <% end %>
