@@ -2,6 +2,9 @@
 
 <ul>
 <% @notes.each do |note| %>
-<li><a><%= note.name %></a></li>
+        <li><%= link_to note.name, note %></li>
 <% end %>
+
+
+
 </ul>

@@ -1,11 +1,11 @@
 class NotesController < ApplicationController
   helper_method :note
   before_action :set_note, only: [:show, :edit, :update, :destroy]
+  before_action :set_tags
 
   def index
     @notes = Note.all
   end
-
 
   def create
     @note = Note.create(note_params)
@@ -19,12 +19,10 @@ class NotesController < ApplicationController
 
   # GET /notes/new
   def new
-    @tags = Tag.all
   end
 
   # GET /notes/1/edit
   def edit
-    @tags = Tag.all
   end  
 
   # helper used in _form based on create/edit existing
@@ -44,6 +42,10 @@ class NotesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_note
       @note = Note.find(params[:id])
+    end
+
+    def set_tags
+      @tags = Tag.all
     end
 
 end
